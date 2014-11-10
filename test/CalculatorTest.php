@@ -2,39 +2,35 @@
 	require_once('app/Calculator.php');
 	class CalculatorTest extends PHPUnit_Framework_TestCase
 {
-	public function setUp(){}
+	private $calc=null;
+
+	public function setUp(){
+		$this->calc = new Calculator();
+	}
 	public function tearDown(){}
 	public function testSumaCorrecta(){
-		$calc = new Calculator();
-		$this->assertEquals(4,$calc->suma(2,2));
+		$this->assertEquals(4,$this->calc->suma(2,2));
 	}
 	public function testSumaIncorrecta(){
-		$calc = new Calculator();
-		$this->assertEquals(4,$calc->suma(2,1));
+		$this->assertEquals(4,$this->calc->suma(3,1));
 	}
 	public function testRestaCorrecta(){
-		$calc = new Calculator();
-		$this->assertEquals(4,$calc->resta(8,4));
+		$this->assertEquals(4,$this->calc->resta(8,4));
 	}
 	public function testRestaNegativos(){
-		$calc = new Calculator();
-		$this->assertEquals(0,$calc->resta(-2,-2));
+		$this->assertEquals(0,$this->calc->resta(-2,-2));
 	}
 	public function testMultiplicacionCorrecta(){
-		$calc = new Calculator();
-		$this->assertEquals(8,$calc->multiplicar(4,2));
+		$this->assertEquals(8,$this->calc->multiplicar(4,2));
 	}
 	public function testMultipliacionNegativos(){
-		$calc = new Calculator();
-		$this->assertEquals(-16,$calc->multiplicar(8,-2));
+		$this->assertEquals(-16,$this->calc->multiplicar(8,-2));
 	}
 	public function testDivisionCorrecta(){
-		$calc = new Calculator();
-		$this->assertEquals(4,$calc->dividir(8,2));
+		$this->assertEquals(4,$this->calc->dividir(8,2));
 	}
 	public function testDivisionIncorrecta(){
-		$calc = new Calculator();
-		$this->assertEquals(5,$calc->dividir(20,10));
+		$this->assertEquals(2,$this->calc->dividir(20,10));
 	}
 }
 ?>
