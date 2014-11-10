@@ -1,0 +1,9 @@
+language: php
+
+before_script: 
+    - chmod +x phpUtils/phpunit.phar
+    - ln -s phpUtils/phpunit.phar phpUtils/phpunit
+    - export PATH=$PATH:phpUtils/
+
+script:
+    - phpunit test/CalculatorTest.php
