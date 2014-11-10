@@ -1,5 +1,5 @@
 <?php
-	require_once('../app/Calculator.php');
+	require_once('app/Calculator.php');
 	class CalculatorTest extends PHPUnit_Framework_TestCase
 {
 	public function setUp(){}
