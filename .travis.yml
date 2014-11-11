@@ -1,8 +1,7 @@
 language: php
 
 before_script: 
-    - chmod +x phpUtils/phpunit.phar
-    - ln -s phpUtils/phpunit.phar phpUtils/phpunit
+    - chmod +x phpUtils/phpunit
     - export PATH=$PATH:phpUtils/
 
 script:
