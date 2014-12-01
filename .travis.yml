@@ -6,3 +6,4 @@ before_script:
 
 script:
     - phpunit test/CalculatorTest.php
+    - phpunit --coverage-html . test/CalculatorTest.php
